@@ -63,10 +63,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R               &kp T                                                                &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F               &kp G        &mkp LCLK                          &kp BACKSLASH        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C         &kp V               &kp B        &mkp RCLK                          &kp LEFT_WIN         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LG(L)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &mt RCTRL BACKSPACE  &lt 2 ENTER                             &kp INT_MUHENKAN
+&kp Q      &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A      &kp S         &kp D         &kp F               &kp G        &mkp LCLK                      &kp BACKSLASH        &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z      &kp X         &kp C         &kp V               &kp B        &mkp RCLK                      &kp LEFT_WIN         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LG(L)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt_to_layer_0 5 CAPSLOCK      &mt RCTRL BACKSPACE  &lt 2 ENTER                             &kp INT_MUHENKAN
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -81,12 +81,12 @@
             >;
         };
 
-        DEFAULT {
+        DEFAULT_KEYS {
             bindings = <
-&kp ASTERISK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                               &kp LC(LS(TAB))  &trans          &trans          &kp LA(F4)       &kp LEFT_WIN
-&kp SLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LC(TAB)      &trans          &kp UP_ARROW    &trans           &kp LEFT_SHIFT
-&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp INT_YEN                  &trans          &kp LG(LS(D))    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
-&trans           &trans           &kp PERIOD       &trans           &trans     &trans                       &trans          &trans                                                            &trans
+&kp ASTERISK     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS                                       &kp LC(LS(TAB))  &trans          &mkp MB3        &kp LA(F4)       &kp LEFT_WIN
+&kp SLASH        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp LC(LA(KP_NUMBER_0))      &trans  &kp LC(TAB)      &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LEFT_SHIFT
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL  &kp INT_YEN                  &trans  &kp LG(LS(D))    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
+&trans           &trans           &kp PERIOD       &trans           &trans     &trans                       &trans  &trans                                                            &trans
             >;
         };
 
@@ -112,10 +112,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&kp ESCAPE     &trans             &trans            &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)                          &kp LG(LS(S))    &trans              &trans              &kp LC(ENTER)        &kp DEL
+&kp LC(MINUS)  &kp LC(PLUS)       &kp LG(LC(C))     &mkp MB4            &mkp MB5                 &trans      &trans  &kp PRINTSCREEN  &mkp MB1            &kp LG(UP_ARROW)    &mkp MB2             &kp LA(TAB)
+&kp LC(MINUS)  &kp LC(SEMICOLON)  &kp LC(NUMBER_1)  &kp LG(LS(V))       &kp LG(LS(RIGHT_ARROW))  &trans      &trans  &trans           &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &kp C_AL_KEYBOARD_LAYOUT
+&trans         &trans             &kp LC(NUMBER_2)  &trans              &trans                   &trans      &trans  &trans                                                                        &trans
             >;
         };
 
