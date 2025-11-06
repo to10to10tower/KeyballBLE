@@ -85,10 +85,10 @@
 
         DEFAULT_KEYS {
             bindings = <
-&kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp MINUS                                       &kp LC(LS(TAB))  &trans          &mkp MB3        &kp LA(F4)       &kp LEFT_WIN
-&kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp LC(LA(KP_NUMBER_0))      &trans  &kp LC(TAB)      &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LEFT_SHIFT
-&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp INT_YEN                  &trans  &kp LG(LS(D))    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
-&trans        &trans        &kp PERIOD    &trans        &trans     &trans                       &trans  &trans                                                            &trans
+&kp ASTERISK  &kp N7        &kp N8        &kp N9        &kp MINUS                                       &trans         &trans          &mkp MB3        &kp LA(F4)       &kp LEFT_WIN
+&kp SLASH     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &kp LC(LA(KP_NUMBER_0))      &trans  &trans         &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LEFT_SHIFT
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL  &kp INT_YEN                  &trans  &kp LG(LS(D))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
+&trans        &trans        &kp PERIOD    &trans        &trans     &trans                       &trans  &trans                                                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
@@ -122,7 +122,7 @@
 &trans         &trans             &trans         &trans                  &trans                   &trans      &trans  &trans                                                                        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_DOWN) LC(PAGE_UP)>;
         };
 
         Bluetooth {
