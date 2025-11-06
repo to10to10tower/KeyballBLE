@@ -65,8 +65,8 @@
             bindings = <
 &kp Q      &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F               &kp G        &mkp LCLK                      &kp BACKSLASH        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C         &kp V               &kp B        &lt 6 K_MUTE                   &kp LEFT_WIN         &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LG(L)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt_to_layer_0 3 CAPSLOCK      &mt RCTRL BACKSPACE  &lt 2 ENTER                             &kp INT_MUHENKAN
+&kp Z      &kp X         &kp C         &kp V               &kp B        &lt 6 K_MUTE                   &mt LEFT_WIN F24     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LG(L)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt_to_layer_0 5 CAPSLOCK      &mt RCTRL BACKSPACE  &lt 2 ENTER                             &kp INT_MUHENKAN
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -80,7 +80,7 @@
 &kp PIPE         &kp CARET     &trans            &trans             &trans         &trans      &trans   &trans                                         &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         DEFAULT_KEYS {
@@ -91,7 +91,7 @@
 &trans        &trans        &kp PERIOD    &trans        &trans     &trans                       &trans  &trans                                                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_BRIGHTNESS_INC C_BRI_DEC>;
+            sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
         };
 
         CUSTOM {
@@ -121,6 +121,8 @@
 &kp LC(MINUS)  &kp LC(SEMICOLON)  &kp LC(TAB)    &kp LG(LS(V))           &kp LG(LS(RIGHT_ARROW))  &trans      &trans  &kp LG(LS(D))    &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &kp C_AL_KEYBOARD_LAYOUT
 &trans         &trans             &trans         &trans                  &trans                   &trans      &trans  &trans                                                                        &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         Bluetooth {
