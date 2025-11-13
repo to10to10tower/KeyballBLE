@@ -88,10 +88,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A      &kp S         &kp D         &kp F               &kp G        &mkp LCLK                      &kp BACKSLASH        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z      &kp X         &kp C         &kp V               &kp B        &lt 6 K_MUTE                   &mt LEFT_WIN F24     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LG(L)  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt_to_layer_0 5 CAPSLOCK      &mt RCTRL BACKSPACE  &lt 2 ENTER                             &kp INT_MUHENKAN
+&kp Q　　　　      &kp W         &kp E         &kp R               &kp T                                                            &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A　　　　      &kp S         &kp D         &kp F               &kp G        &mkp LCLK                      &mt LEFT_ALT F23     &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z    　　　　  &kp X         &kp C         &kp V               &kp B        &lt 6 K_MUTE                   &mt LEFT_WIN F24     &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp INT_MUHENKAN  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT TAB  &lt 1 SPACE  &lt_to_layer_0 5 CAPSLOCK      &mt RCTRL BACKSPACE  &lt 2 ENTER                             &kp LG(L)
             >;
 
             sensor-bindings = <&ROTATE SCRL_DOWN SCRL_UP>;
@@ -112,7 +112,7 @@
             bindings = <
 &kp JP_ASTERISK  &kp N7        &kp N8        &kp N9        &kp MINUS                                       &trans         &trans          &mkp MB3        &kp LA(F4)       &kp LEFT_WIN
 &kp SLASH        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp JP_PLUS  &kp LC(LA(KP_NUMBER_0))      &trans  &trans         &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp LEFT_SHIFT
-&kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_CARET &kp INT_YEN                  &trans  &kp LG(LS(D))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
+&kp NUMBER_0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp JP_EQUAL &kp INT_YEN                  &trans  &kp LG(LS(D))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LCTRL
 &trans           &trans        &kp PERIOD    &trans        &trans       &trans                       &trans  &trans                                                          &trans
             >;
 
@@ -133,7 +133,7 @@
         MOUSE {
             bindings = <
 &trans    &trans     &trans     &trans     &trans                           &trans    &trans     &mkp MCLK  &trans     &trans
-&mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5  &mkp LCLK      &trans  &mkp MB4  &mkp LCLK  &mkp MCLK  &mkp RCLK  &mkp MB5
+&trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mkp LCLK      &trans  &trans    &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans   
 &trans    &trans     &trans     &trans     &trans    &mkp RCLK      &trans  &trans    &trans     &trans     &trans     &trans
 &trans    &trans     &trans     &trans     &trans    &trans         &trans  &trans                                     &trans
             >;
