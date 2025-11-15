@@ -6,7 +6,7 @@
     input-processors {
       scaler_function: scaler_function {
         compatible = "zmk,input-processor-scaler";
-        type = "scaler";
+        type = <1>;
         layer = <1>;
         scale = <1 4>;
       };
