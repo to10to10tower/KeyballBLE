@@ -8,7 +8,7 @@
         compatible = "zmk,input-processor-scaler";
         layer = <1>;   // FUNCTIONレイヤー番号
         scale = <1 4>; // 1/4スケール
-      }
+      };
     };
 
     chosen {
