@@ -7,12 +7,37 @@
     input-processors {
         scaler_function: scaler_function {
             compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;       // 必ず2で固定
-            type = <INPUT_EV_REL>;              // 相対移動イベントタイプ（通常は2）
-            codes = <INPUT_REL_X INPUT_REL_Y>;  // X軸とY軸の相対移動コード
-            layer = <1>;                       // レイヤー1が有効なときのみ適用
-            scale = <1 4>;                     // 速度を1/4にスケール
-            track-remainders;                  // 変換誤差を内部で追跡
+            #input-processor-cells = <2>;
+            type = <2>;
+            codes = <REL_X REL_Y>;
+            scale = <1 4>;
+            track-remainders;
+        };
+
+        default_scaler: default_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <2>;
+            codes = <REL_X REL_Y>;
+            scale = <1 1>;
+            track-remainders;
+        };
+    };
+
+    input-listeners {
+        scaler_listener: scaler_listener {
+            compatible = "zmk,input-listener";
+            device = <&trackball>;
+
+            default_layers {
+                layers = <0 2 3 4 5 6>;
+                input-processors = <&default_scaler>;
+            };
+
+            layer_1 {
+                layers = <1>;
+                input-processors = <&scaler_function>;
+            };
         };
     };
 
