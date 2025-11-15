@@ -7,10 +7,12 @@
     input-processors {
         scaler_function: scaler_function {
             compatible = "zmk,input-processor-scaler";
-            type = <2>;                       // 相対移動イベントタイプ（カーソル移動など）
-            codes = <REL_X REL_Y>;            // X軸とY軸の相対移動コード
-            layer = <1>;                      // レイヤー1が有効なときのみ適用
-            scale = <1 4>;                    // 速度を1/4にスケール
+            #input-processor-cells = <2>;       // 必ず2で固定
+            type = <INPUT_EV_REL>;              // 相対移動イベントタイプ（通常は2）
+            codes = <INPUT_REL_X INPUT_REL_Y>;  // X軸とY軸の相対移動コード
+            layer = <1>;                       // レイヤー1が有効なときのみ適用
+            scale = <1 4>;                     // 速度を1/4にスケール
+            track-remainders;                  // 変換誤差を内部で追跡
         };
     };
 
