@@ -6,8 +6,9 @@
     input-processors {
       scaler_function: scaler_function {
         compatible = "zmk,input-processor-scaler";
-        layer = <1>;   // FUNCTIONレイヤー番号
-        scale = <1 4>; // 1/4スケール
+        type = "scaler";
+        layer = <1>;
+        scale = <1 4>;
       };
     };
 
