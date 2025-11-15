@@ -10,6 +10,7 @@
         scale = <1 4>; // 1/4スケール
       };
     };
+
     chosen {
         zmk,physical-layout = &roba_physical_layout;
     };
