@@ -1,15 +1,17 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 #include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
     input-processors {
-      scaler_function: scaler_function {
-        compatible = "zmk,input-processor-scaler";
-        type = <1>;
-        layer = <1>;
-        scale = <1 4>;
-      };
+        scaler_function: scaler_function {
+            compatible = "zmk,input-processor-scaler";
+            type = <2>;                       // 相対移動イベントタイプ（カーソル移動など）
+            codes = <REL_X REL_Y>;            // X軸とY軸の相対移動コード
+            layer = <1>;                      // レイヤー1が有効なときのみ適用
+            scale = <1 4>;                    // 速度を1/4にスケール
+        };
     };
 
     chosen {
