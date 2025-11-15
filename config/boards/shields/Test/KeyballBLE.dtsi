@@ -1,46 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
-#include <input/processors.dtsi>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 / {
-    input-processors {
-        scaler_function: scaler_function {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <2>;                // 相対移動イベントタイプ
-            codes = <REL_X REL_Y>;     // X, Y 軸の相対移動コード
-            scale = <1 4>;             // レイヤー1で速度を1/4にスケール
-            track-remainders;          // 誤差追跡するオプション
-        };
-
-        default_scaler: default_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <2>;
-            codes = <REL_X REL_Y>;
-            scale = <1 1>;             // その他レイヤーは標準速度
-            track-remainders;
-        };
-    };
-
-    input-listeners {
-        scaler_listener: scaler_listener {
-            compatible = "zmk,input-listener";
-            device = <&trackball>;    // 対象デバイスの参照
-
-            default_layers {
-                layers = <0 2 3 4 5 6>;
-                input-processors = <&default_scaler>;
-            };
-
-            layer_1 {
-                layers = <1>;
-                input-processors = <&scaler_function>;
-            };
-        };
-    };
-
     chosen {
         zmk,physical-layout = &roba_physical_layout;
     };
